@@ -22,7 +22,7 @@
 
 'use strict';
 const Alexa = require('alexa-sdk');
-const APP_ID = "amzn1.ask.skill.2b8bf215-1cb4-4a60-adc6-ff7b4ab2bcce";  // TODO replace with your app ID (OPTIONAL). Español
+const APP_ID = "amzn1.ask.skill.XXXXXXXXXXXXXXXXXXXXXXXXX";  // TODO replace with your app ID (OPTIONAL). Español
 const handlers = {
     'LaunchRequest': function () {
       this.response.speak(welcomeOutput).listen(welcomeReprompt);
@@ -142,13 +142,13 @@ function delegateSlotCollection(){
 }
 
 function getDataFromSAP(pOficinaId, pPeriodoSAP, pFieldsRequestedId, pGrupoArtId, callback){
-  var url = "https://gwaas-p1165303trial.hanatrial.ondemand.com/odata/SAP/ZSD_DEMO_ALEXA_VTASV2_SRV;v=1";
+  var url = "https://gwaas-XXXXXXXXX.hanatrial.ondemand.com/odata/SAP/ZSD_DEMO_ALEXA_VTASV2_SRV;v=1";
   var entitySet = "/VentasSet";
   var format = "&$format=json";
   var version = "";
   var args = {
                 headers: { 
-                           "Authorization": "Basic amoudGVyYW5AaGFyaW5lcmFkZWx2YWxsZS5jb206Q2NtdDQyNjEk" 
+                           "Authorization": "Basic XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX" 
                          }
   };
   
