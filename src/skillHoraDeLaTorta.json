@@ -1,0 +1,120 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "hora de la torta",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "CaptureBirthdayIntent",
+                    "slots": [
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month"
+                        },
+                        {
+                            "name": "day",
+                            "type": "AMAZON.Ordinal"
+                        },
+                        {
+                            "name": "year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "naci el {day} de {month} de {year}",
+                        "Yo naci en el mes de {month} del año {year}",
+                        "{day} de {month}",
+                        "{month} de {year}",
+                        "{month} {day}",
+                        "{day} de {month} de {year}",
+                        "Yo naci el {day} de {month} de {year}"
+                    ]
+                }
+            ],
+            "types": []
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "CaptureBirthdayIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "month",
+                            "type": "AMAZON.Month",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1474834164811.208157349364"
+                            }
+                        },
+                        {
+                            "name": "day",
+                            "type": "AMAZON.Ordinal",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1474834164811.1351890102377"
+                            }
+                        },
+                        {
+                            "name": "year",
+                            "type": "AMAZON.FOUR_DIGIT_NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1474834164811.330400037207"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1474834164811.208157349364",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "En que mes naciste?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1474834164811.1351890102377",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "En que dia naciste?"
+                    }
+                ]
+            },
+            {
+                "id": "Elicit.Slot.1474834164811.330400037207",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "En que año naciste?"
+                    }
+                ]
+            }
+        ]
+    }
+}
